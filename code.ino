@@ -24,7 +24,7 @@ int crash = 7;
 
 
 int get_location(String message){
-  SIM900.print("ATD +919481491820 ;\r");
+  SIM900.print("ATD +91948149**** ;\r");
   delay(1000);
   SIM900.print("AT+CMGF=1\r");     // AT command to set SIM900 to SMS mode
   delay(100);
@@ -33,7 +33,7 @@ int get_location(String message){
     
   SIM900.println("AT+CMGF=1"); // Replace x with mobile number
   delay(1000);
-  SIM900.println("AT+CMGS= \"+919481491820\"\r"); // Replace Number with mobile number
+  SIM900.println("AT+CMGS= \"+91948149****\"\r"); // Replace Number with mobile number
   delay(1000); 
   SIM900.println(message);// The SMS text you want to send
   delay(100);
